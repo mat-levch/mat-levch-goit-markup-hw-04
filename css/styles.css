@@ -110,6 +110,7 @@ color: #000;
     letter-spacing: 0.02em;
     
 }
+
 .site-nav .item +.item{
     margin-left: 50px;
 }
@@ -136,12 +137,21 @@ color: #000;
 /* Hero section */
 .hero{ 
     
+    background-color:var(--background-color-1);        
+    text-align:Center; 
+
     padding-top: 200px;
     padding-bottom: 200px;
     margin-left: auto;
     margin-right: auto;
-    background-color:var(--background-color-1);        
-    text-align:Center; 
+    max-width: 1600px;
+    height: 600px;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+    url(../images/background-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
  
 }
 
@@ -191,7 +201,26 @@ color: #000;
     .features-item{
     width: 270px;
 }
+.features-item::before{
+    display: block;
+    content: "";
+    height: 120px;
+    background-size: contain;
+    background-position: center;
+    background-color: #F5F4FA;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+    
+}
 
+.icon-antenna::before{
+    background-image: url(../images/antenna\ 1.svg);
+    
+}
+
+.icon-clock::before{
+    background-image: url(../images/clock\ 1.svg);
+}
 .features, .title{
     margin-top: 0;
     margin-left: 0;
@@ -249,7 +278,7 @@ color: #000;
 
     background-color: #F5F4FA; 
 }
-.team-section{ 
+.team-title{ 
     
     padding-bottom: 50px;
     
@@ -305,8 +334,56 @@ color: #000;
     font-size: 16px;
     line-height: 1.17;
     text-align: center;
-    
+    margin-bottom: 16px;
 }
+
+.member-network-list{
+    display: flex;
+    justify-content: center;
+    background-color: teal;
+}
+
+.member-network-item + .member-network-item{
+    margin-left: 10px;
+}
+    
+
+/* Постоянные клиенты */
+
+.client-section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.client-title{
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1,17;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.client-list{
+    display: flex;
+    justify-content: center;
+}
+    
+
+.client-item{
+    display: flex;
+    
+    width: 170px;
+    height: 92px;
+    background-color: teal;
+}
+.client-list .client-item:not(:last-child){
+    margin-right: 30px;
+}
+    
 
 
 /* footer section */
@@ -319,8 +396,14 @@ color: #000;
     display: flex;
 }
 
+.footer-container{
+    display: flex;
+    align-items: baseline;
+}
+
 .footer-items{
     display: block;
+    margin-right: 70px;
 }
 
 .logo-footer{
@@ -354,7 +437,6 @@ padding: 0;
     color: #FFFFFF99;
     text-decoration: none;   
     font-weight: 400; 
-    font-style: normal;
     font-size: 14px;
     line-height: 1,71;  
 }
@@ -368,8 +450,39 @@ padding: 0;
     margin-bottom: 9px;
 }
     
+.footer-networks{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+   .footer-title{
+    color: #ffffff;
+    text-transform: uppercase;
 
+    font-family: Roboto,sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1,14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 
+   } 
+
+   .footer-list{
+    display: flex;
+    justify-content: center;
+   }
+
+   .footer-item{
+    width: 44px;
+    height: 44px;
+    background-color: teal;
+   }
+   .footer-list .footer-item:not(:last-child){
+       margin-right: 10px;
+   }
 
 
 
